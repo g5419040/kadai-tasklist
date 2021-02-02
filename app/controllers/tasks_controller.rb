@@ -6,7 +6,6 @@ class TasksController < ApplicationController
     end
 
     def show
-        set_task
     end
     
     def new
@@ -21,12 +20,11 @@ class TasksController < ApplicationController
             redirect_to @task
         else
             flash.now[:danger] = 'Taskが保存されませんでした'
-            render:new
+            render :new
         end
     end
     
     def edit
-        set_task
     end
     
     def update
@@ -42,7 +40,6 @@ class TasksController < ApplicationController
     end
         
     def destroy
-        set_task
         @task.destroy
         
         flash[:success] = 'Taskは正常に削除されました'
