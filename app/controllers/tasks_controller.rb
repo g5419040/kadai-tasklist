@@ -21,7 +21,7 @@ class TasksController < ApplicationController
             redirect_to @task
         else
             flash.now[:danger] = 'Taskが保存されませんでした'
-            render.new
+            render:new
         end
     end
     
